@@ -20,7 +20,6 @@
 　　┣ public　
 　　　　　┣ css
 　　　　　　　┣ app.css（コンパイル先）
-   ┣ 
 ```
 
 ## 参考URL
