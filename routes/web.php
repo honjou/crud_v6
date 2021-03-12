@@ -19,5 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Bootstrap Template
-Route::get('/bootstrap','BootstrapController@getIndex');
+/**
+ * Sass compile
+ */
+Route::get('bootstrap-tmp-v2/', 'BootTempController@getIndex2');

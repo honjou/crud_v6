@@ -1,5 +1,5 @@
-@extends('layouts.master_bootstrap')  {{--テンプレート読み込み--}}
-@section('title', 'Laravel学習用プロトタイプA')  {{--サイトタイトル定義--}}
+@extends('layouts.master_bootstrap') {{-- テンプレート読み込み --}}
+@section('title', 'Laravel学習用プロトタイプA') {{-- サイトタイトル定義 --}}
 @section('content')
     <!-- Page Content -->
     <div id="page-content">
