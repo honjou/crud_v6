@@ -7,7 +7,7 @@
 
 ## デモ
 
-[デモページ](http://18.176.27.75/bootstrap-tmp-v2/)
+<a href="http://18.176.27.75/bootstrap-tmp-v2/" target="_blank">デモページ</a>
 
 ## ディレクトリ構成
 
@@ -37,4 +37,4 @@
 
 ## 参考URL
 
-詳細については[こちら](https://laraweb.net/environment/7907/)
+詳細については<a href="https://laraweb.net/environment/7907/" target="_blank">こちら</a>
