@@ -16,10 +16,19 @@
 　　┃　　┃　　┣ app.scss（コンパイル元）
 　　┃　　┣ views
 　　┃　　　　　┣ boot_template
-　　┃　　　　　　　┣ index.blade.php（表示用）
+　　┃　　　　　┃　　┣ index2.blade.php（テンプレート子）
+　　┃　　　　　┣ layouts
+　　┃　　　　　　　 ┣ footer_bootstrap_v2.blade.php（フッター）
+　　┃　　　　　　　 ┣ header_bootstrap_v2.blade.php（ヘッダー）
+　　┃　　　　　　　 ┣ master_bootstrap_v2.blade.php（テンプレート親）
 　　┣ public　
-　　　　　┣ css
-　　　　　　　┣ app.css（コンパイル先）
+　　　　　┣ assets
+　　　　　　　┣ css
+　　　　　　　┃　┗ app.css（コンパイル先）
+　　　　　　　┣ images
+　　　　　　　┃　┗ logo.svg（ロゴ画像）
+　　　　　　　┣ js
+　　　　　　　　 ┗ app.js（未使用）
 ```
 
 ## 参考URL
