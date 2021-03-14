@@ -13,7 +13,7 @@ const sass = require('gulp-sass');
 const cssSass = () => {
     return src('./resources/sass/*.scss') //コンパイル元
         .pipe(sass({ outputStyle: 'expanded' }))
-        .pipe(dest('./public/css/'))     //コンパイル先
+        .pipe(dest('./public/assets/css/')) //コンパイル先
 }
 
 // タスクをまとめて実行
