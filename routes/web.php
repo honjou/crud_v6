@@ -23,3 +23,9 @@ Route::get('/home', 'HomeController@index')->name('home');
  * Sass compile
  */
 Route::get('bootstrap-tmp-v2/', 'BootTempController@getIndex2');
+
+/**
+ * CRUD View Template
+ */
+Route::get('bootstrap-tmp-v5/', 'BootTempController@getIndex5');
+Route::get('crud-app/', 'CrudAppController@getIndex');
