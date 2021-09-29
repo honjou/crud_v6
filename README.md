@@ -3,3 +3,5 @@
 ## CRUDアプリ v6
 
 - Laravel学習帳 CRUDアプリの記事
+
+- Laravel version 6
