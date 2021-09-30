@@ -25,9 +25,10 @@ class ValiCrudRequest extends FormRequest
     {
         return [
             //
-            'username'=>'required',
-            'email'=>'required|email',
-            'tel'=>'required'
+            'name' => 'required',
+            'email' => 'required|email',
+            'tel' => 'required',
+            'message' => 'required'
         ];
     }
 

@@ -15,36 +15,48 @@
                     <div class="container mt-5">
 
                         <!--フォーム-->
-                        {{Form::open(['url' => '/', 'files' => true])}}
+                        <form action="" method="post">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="name" value="{{$name}}">
+                        <input type="hidden" name="email" value="{{$email}}">
+                        <input type="hidden" name="tel" value="{{$tel}}">
+                        <input type="hidden" name="message" value="{{$message}}">
 
-                            <!--お名前-->
-                            <div class="form-group row">
-                                <label for="inputName" class="col-sm-2 col-form-label">お名前</label>
-                                <div class="col-sm-10">{{$name}}</div>
-                            </div>
-                            <!--/お名前-->
+                        <!--お名前-->
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">お名前</label>
+                            <div class="col-sm-10">{{$name}}</div>
+                        </div>
+                        <!--/お名前-->
 
-                            <!--メールアドレス-->
-                            <div class="form-group row">
-                                <label for="inputEmail" class="col-sm-2 col-form-label">メールアドレス</label>
-                                <div class="col-sm-10">{{$email}}</div>
-                            </div>
-                            <!--/メールアドレス-->
+                        <!--メールアドレス-->
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">メールアドレス</label>
+                            <div class="col-sm-10">{{$email}}</div>
+                        </div>
+                        <!--/メールアドレス-->
 
-                            <!--電話番号-->
-                            <div class="form-group row">
-                                <label for="inputTel" class="col-sm-2 col-form-label">電話番号</label>
-                                <div class="col-sm-10">{{$tel}}</div>
-                            </div>
-                            <!--/電話番号-->
+                        <!--電話番号-->
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">電話番号</label>
+                            <div class="col-sm-10">{{$tel}}</div>
+                        </div>
+                        <!--/電話番号-->
 
-                            <!--ボタンブロック-->
-                            <div class="form-group row mt-5">
-                                <div class="col-sm-12">
-                                    <button type="submit" class="btn btn-primary btn-block">登録</button>
-                                </div>
+                        <!--メッセージ-->
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">メッセージ</label>
+                            <div class="col-sm-10">{{$message}}</div>
+                        </div>
+                        <!--/電話番号-->
+
+                        <!--ボタンブロック-->
+                        <div class="form-group row mt-5">
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-primary btn-block">登録</button>
                             </div>
-                            <!--/ボタンブロック-->
+                        </div>
+                        <!--/ボタンブロック-->
 
                         {{Form::close()}}
                         <!--/フォーム-->

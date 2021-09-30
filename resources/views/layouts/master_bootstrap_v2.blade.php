@@ -31,5 +31,28 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<script>
+
+    // 無効なフィールドがある場合にフォーム送信を無効にするスターターJavaScriptの例
+    (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+            // カスタムブートストラップ検証スタイルを適用するすべてのフォームを取得
+            var forms = document.getElementsByClassName('needs-validation');
+            // ループして帰順を防ぐ
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                // submitボタンを押したら以下を実行
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
 </body>
 </html>
