@@ -30,8 +30,18 @@ Route::get('bootstrap-tmp-v5/', 'BootTempController@getIndex5');
  */
 
 Route::group(['prefix' => 'student'], function () {
+    /**
+     * 登録
+     */
     Route::get('list', 'CrudController@getIndex');    // 一覧
     Route::get('new', 'CrudController@new_index');    // 入力
     Route::patch('new','CrudController@new_confirm'); // 確認
     Route::post('new', 'CrudController@new_finish');  // 完了
+
+    /**
+     * 編集
+     */
+    Route::get('edit/{id}/', 'CrudController@edit_index'); //編集
+    Route::patch('edit/{id}/','CrudController@edit_confirm'); //確認
+    Route::post('edit/{id}/', 'CrudController@edit_finish'); //完了
 });
