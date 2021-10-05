@@ -41,7 +41,13 @@ Route::group(['prefix' => 'student'], function () {
     /**
      * 編集
      */
-    Route::get('edit/{id}/', 'CrudController@edit_index'); //編集
-    Route::patch('edit/{id}/','CrudController@edit_confirm'); //確認
-    Route::post('edit/{id}/', 'CrudController@edit_finish'); //完了
+    Route::get('edit/{id}/', 'CrudController@edit_index');    // 編集
+    Route::patch('edit/{id}/','CrudController@edit_confirm'); // 確認
+    Route::post('edit/{id}/', 'CrudController@edit_finish');  // 完了
+
+    /**
+     * 詳細
+     */
+    Route::get('detail/{id}/', 'CrudController@detail_index'); // 詳細
+
 });

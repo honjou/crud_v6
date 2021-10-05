@@ -54,7 +54,7 @@
                                     <td>{{$student->name}}</td>
                                     <td>{{$student->email}}</td>
                                     <td>{{$student->tel}}</td>
-                                    <td><button type="button" class="btn btn-success">詳細</button></td>
+                                    <td><a href="/student/detail/{{$student->id}}"><button type="button" class="btn btn-success">詳細</button></a></td>
                                     <td><a href="/student/edit/{{$student->id}}"><button type="button" class="btn btn-primary">編集</button></a></td>
                                     <td><button type="button" class="btn btn-danger">削除</button></td>
                                 </tr>

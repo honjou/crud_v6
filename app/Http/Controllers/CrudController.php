@@ -92,4 +92,14 @@ class CrudController extends Controller
         //リダイレクト
         return redirect()->to('student/list');
     }
+
+    /**
+     * 詳細画面
+     */
+    public function detail_index($id)
+    {
+        $student = \App\Student::findOrFail($id);
+        return view('student.detail_index')->with('student',$student);
+    }
+
 }
