@@ -85,6 +85,7 @@ class CrudController extends Controller
         $student->name = $request->name;
         $student->email = $request->email;
         $student->tel = $request->tel;
+        $student->message = $request->message;
 
         //保存（更新）
         $student->save();
