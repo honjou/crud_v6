@@ -50,4 +50,10 @@ Route::group(['prefix' => 'student'], function () {
      */
     Route::get('detail/{id}/', 'CrudController@detail_index'); // 詳細
 
+    /**
+     * 削除
+     */
+    Route::post('delete/{id}/', 'CrudController@us_delete'); // 削除
+
+
 });

@@ -34,9 +34,6 @@
                                 </div>
                         </div>
 
-                        {{Form::open(['url' => '/', 'files' => true])}}
-                        {{Form::token()}}
-
                             <!--テーブル-->
                             <div class="table-responsive">
                                 <table class="table" style="width: 1000px; max-width: 0 auto;">
@@ -56,15 +53,18 @@
                                     <td>{{$student->tel}}</td>
                                     <td><a href="/student/detail/{{$student->id}}"><button type="button" class="btn btn-success">詳細</button></a></td>
                                     <td><a href="/student/edit/{{$student->id}}"><button type="button" class="btn btn-primary">編集</button></a></td>
-                                    <td><button type="button" class="btn btn-danger">削除</button></td>
+                                    <td>
+                                        <form action="/student/delete/{{$student->id}}" method="POST">
+                                        {{ csrf_field() }}
+                                        <input type="submit" class="btn btn-danger btn-dell" value="削除">
+                                        </form>
+                                    </td>
                                 </tr>
                                 @endforeach
 
                                 </table>
                             </div>
                             <!--/テーブル-->
-
-                        {{Form::close()}}
 
                         <!-- ページネーション -->
                         {!! $students->render() !!}
@@ -76,3 +76,19 @@
     </div>
     <!-- / Page Content -->
 @endsection
+
+@section('btn-dell')
+<script>
+$(function (){
+    $(".btn-dell").click(function(){
+        if(confirm("本当に削除しますか？")){
+            // そのままsubmit処理を実行（※削除）
+        }else{
+            // キャンセル
+            return false;
+        }
+    });
+});
+</script>
+@endsection
+
