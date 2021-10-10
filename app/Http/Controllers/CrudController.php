@@ -103,17 +103,17 @@ class CrudController extends Controller
         return view('student.detail_index')->with('student',$student);
     }
 
-    /**
-     * 削除
-     */
-    public function us_delete($id)
-    {
-        // 削除対象レコードを検索
-        $user = \App\Student::find($id);
-        // 削除
-        $user->delete();
-        // リダイレクト
-        return redirect()->to('student/list');
-    }
+/**
+ * 削除
+ */
+public function us_delete($id)
+{
+    // 削除対象レコードを検索
+    $user = \App\Student::find($id);
+    // 削除
+    $user->delete();
+    // リダイレクト
+    return redirect()->to('student/list');
+}
 
 }

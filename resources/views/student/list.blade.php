@@ -13,8 +13,6 @@
 
                     <!-- Page Content -->
                     <div class="container mt-5">
-
-
                         <div class="row" style="padding-bottom: 30px; margin-left: 0px; margin-right: 15px;">
                             <div class="col-sm-10" style="padding-left:0;">
                                 <!-- 検索フォーム -->
