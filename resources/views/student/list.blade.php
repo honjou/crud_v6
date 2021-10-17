@@ -18,7 +18,7 @@
                                 <!-- 検索フォーム -->
                                 <form method="get" action="" class="form-inline">
                                     <div class="form-group">
-                                        <input type="text" name="keyword" class="form-control" value="" placeholder="検索キーワード">
+                                        <input type="text" name="keyword" class="form-control" value="{{$keyword}}" placeholder="名前やメールアドレス">
                                     </div>
                                     <div class="form-group">
                                         <input type="submit" value="検索" class="btn btn-info" style="margin-left: 15px; color:white;">
@@ -65,7 +65,7 @@
                             <!--/テーブル-->
 
                         <!-- ページネーション -->
-                        {!! $students->render() !!}
+                        {!! $students->appends(['keyword'=>$keyword])->render() !!}
 
                     </div><!-- /container -->
                 </div>

@@ -18,7 +18,7 @@ class StudentsTableSeeder extends Seeder
         $faker = Faker\Factory::create('ja_JP');
 
         # サンプルデータの挿入
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 100; $i++) {
             \App\Student::create([
                 'name' => $faker->name(),
                 'email' => $faker->email(),
