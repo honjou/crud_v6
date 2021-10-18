@@ -64,7 +64,7 @@ class CrudController extends Controller
         $student->save();
 
         // 一覧にリダイレクト
-        return redirect()->to('student/list');
+        return redirect()->to('student/list')->with('flashmessage','登録が完了いたしました。');
     }
 
     /**
@@ -103,7 +103,7 @@ class CrudController extends Controller
         $student->save();
 
         //リダイレクト
-        return redirect()->to('student/list');
+        return redirect()->to('student/list')->with('flashmessage','更新が完了いたしました。');
     }
 
     /**
@@ -125,7 +125,7 @@ public function us_delete($id)
     // 削除
     $user->delete();
     // リダイレクト
-    return redirect()->to('student/list');
+    return redirect()->to('student/list')->with('flashmessage','削除が完了いたしました。');
 }
 
 }
