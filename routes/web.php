@@ -31,6 +31,7 @@ Route::get('bootstrap-tmp-v5/', 'BootTempController@getIndex5');
 
 Route::group(['prefix' => 'student'], function () {
 
+    Route::group(['middleware' => 'basicauth'], function() {
     /**
      * 一覧
      */
@@ -59,6 +60,6 @@ Route::group(['prefix' => 'student'], function () {
      * 削除
      */
     Route::post('delete/{id}/', 'CrudController@us_delete'); // 削除
-
+    });
 
 });
