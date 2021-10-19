@@ -2,6 +2,10 @@
 
 ## CRUDアプリ v6
 
-- Laravel学習帳 CRUDアプリの記事
-
+- [Laravel学習帳 CRUDアプリのチュートリアル](https://laraweb.net/crud/elementary/) のソースコードになります。
 - Laravel version 6
+
+## デモ
+
+- [https://laravel.tokyo/student/list](https://laravel.tokyo/student/list) 
+- 【ベーシック認証】id:laraweb / pass:laraweb
